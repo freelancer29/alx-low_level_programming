@@ -2,9 +2,9 @@ include <stdio.h>
 
 int main()
 {
-    int x=1;
-    printf("%d\n", x)
+   int x=1;
+   printf("%\n", x);
 
-   return 0;
+   return o;
 }
 
