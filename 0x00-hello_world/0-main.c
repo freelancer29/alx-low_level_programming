@@ -1,10 +1,8 @@
-include <stdio.h>
+include < stdio.h >
 
-int main()
+int main(void)
 {
-   int x=1;
-   printf("%\n", x);
-
-   return o;
+int x = 1;
+printf("%\n", x);
+return (o);
 }
-
