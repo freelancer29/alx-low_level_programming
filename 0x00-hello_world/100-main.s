@@ -1,8 +1,8 @@
-	.file	"0-main.c"
+	.file	"100-main.c"
 	.text
 	.section	.rodata
 .LC0:
-	.string	"%d\n"
+	.string	"hello world!"
 	.text
 	.globl	main
 	.type	main, @function
@@ -15,15 +15,10 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$16, %rsp
-	movl	$1, -4(%rbp)
-	movl	-4(%rbp), %eax
-	movl	%eax, %esi
 	leaq	.LC0(%rip), %rdi
+	call	puts@PLT
 	movl	$0, %eax
-	call	printf@PLT
-	movl	$0, %eax
-	leave
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
